@@ -1,1 +1,1 @@
-# pancakeSwap_trading_bot
+# PancakeSwap trading bot using Node.js
