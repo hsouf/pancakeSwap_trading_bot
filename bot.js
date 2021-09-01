@@ -4,11 +4,11 @@ const bot = async function () {
   const addresses = {
     token_in: "0xe9e7cea3dedca5984780bafc599bd69add087d56", //BUSD address
     token_out: "", //address of the token you want to buy
-
-    router: "0x05fF2B0DB69458A0750badebc4f9e13aDd608C7F",
+    factory: "0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73",
+    router: "0x10ED43C718714eb63d5aA57B78B54704E256024E",
     recipient: "", // your public key to be added here
   };
-  const mnemonic = ""; // your mnemonic goes here respect the spacing !
+  const mnemonic = ""; // your mnemonic/private key goes here respect the spacing !
   var accountAddress;
   const wallet = ethers.Wallet.fromMnemonic(mnemonic);
 
@@ -37,7 +37,7 @@ const bot = async function () {
   const howMuchTokentoApprove = ethers.utils.parseUnits("1", "ether");
 
   console.log("Waiting for Approval receipt...");
-  const txh = await BUSD.approve(addresses.router, howMuchTokentoApprove); //sets the limite of the number of tokens that the router contract can get !!!!! very dangerous
+  const txh = await BUSD.approve(addresses.router, howMuchTokentoApprove); 
   const receipt1 = await txh.wait();
   console.log("Transaction receipt"); //uncomment it to approve the router to withdraw busd
 
