@@ -13,7 +13,7 @@ const bot = async function () {
   const wallet = ethers.Wallet.fromMnemonic(mnemonic);
 
   let provider = new ethers.providers.JsonRpcProvider(
-    "https://bsc-dataseed1.binance.org:443" //connects you to the binance smart chain main network
+    "https://bsc-dataseed.binance.org/" 
   );
   const account = wallet.connect(provider);
 
