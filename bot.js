@@ -9,7 +9,7 @@ const bot = async function () {
     recipient: "", // your public key to be added here
   };
   const mnemonic = ""; // your mnemonic/private key goes here respect the spacing !
-  var accountAddress;
+
   const wallet = ethers.Wallet.fromMnemonic(mnemonic);
 
   let provider = new ethers.providers.JsonRpcProvider(
